@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-amber-900 text-white p-4 shadow">
+  <nav class="bg-amber-900 text-white p-5 shadow">
     <div class="container mx-auto flex justify-between">
       <h1 class="font-bold text-xl">Pawon</h1>
       <ul class="flex gap-6">

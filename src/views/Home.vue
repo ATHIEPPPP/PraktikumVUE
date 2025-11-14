@@ -10,7 +10,7 @@
       "
     >
       <h1 class="text-5xl font-bold text-white drop-shadow-lg">
-        Pawon – Dapur Tradisional Jawa
+        Pawon
       </h1>
     </section>
 

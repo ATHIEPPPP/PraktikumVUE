@@ -1,35 +1,50 @@
 <template>
-  <section class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-amber-900">Overview</h2>
+  <section id="tentang" class="container mx-auto px-4 py-16">
+    <div class="max-w-xl mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
+        Kenapa Memilih Pawon?
+      </h2>
+      <p class="text-sm text-slate-500">
+        Kami menggabungkan cita rasa rumahan, bahan berkualitas, dan pelayanan
+        hangat untuk setiap pelanggan.
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <!-- Card 1 -->
-      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl text-amber-800 mb-3">Sejarah Pawon</h3>
-        <p class="text-gray-600">
-          Pawon merupakan dapur tradisional masyarakat Jawa dengan tungku tanah
-          liat, perapian, serta peralatan bambu dan kayu yang digunakan sejak
-          ratusan tahun lalu.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl text-amber-800 mb-3">Fungsi Utama</h3>
-        <p class="text-gray-600">
-          Selain tempat memasak, pawon menjadi ruang berkumpul keluarga,
-          menghangatkan diri, dan tempat berkomunikasi antar anggota keluarga.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
-        <h3 class="font-bold text-xl text-amber-800 mb-3">
-          Peralatan Tradisional
+    <div class="grid gap-6 md:grid-cols-3">
+      <div
+        class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm space-y-2"
+      >
+        <p class="text-xs font-semibold text-amber-700">01 • Bahan Segar</p>
+        <h3 class="font-semibold text-slate-900 text-sm">
+          Bahan berkualitas setiap hari
         </h3>
-        <p class="text-gray-600">
-          Pawon dilengkapi anglo, kukusan bambu, kendi, lesung, cobek, dan
-          tungku kayu yang tetap digunakan hingga kini.
+        <p class="text-xs text-slate-500">
+          Sayur, daging, dan bumbu dipilih dengan cermat sehingga rasa tetap
+          konsisten dan sehat.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm space-y-2"
+      >
+        <p class="text-xs font-semibold text-amber-700">02 • Resep Rumahan</p>
+        <h3 class="font-semibold text-slate-900 text-sm">
+          Cita rasa autentik nusantara
+        </h3>
+        <p class="text-xs text-slate-500">
+          Resep turun-temurun dengan sentuhan modern, cocok untuk semua lidah.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm space-y-2"
+      >
+        <p class="text-xs font-semibold text-amber-700">03 • Suasana Hangat</p>
+        <h3 class="font-semibold text-slate-900 text-sm">
+          Tempat nyaman untuk berkumpul
+        </h3>
+        <p class="text-xs text-slate-500">
+          Cocok untuk makan sendiri, bersama keluarga, ataupun teman kerja.
         </p>
       </div>
     </div>

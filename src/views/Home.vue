@@ -33,12 +33,12 @@
             </p>
 
             <div class="flex flex-wrap gap-3">
-              <a
-                href="#menu"
+              <router-link
+                to="/menu"
                 class="inline-flex items-center rounded-full bg-amber-600 px-5 py-2.5 text-xs md:text-sm font-semibold text-white shadow hover:bg-amber-700 transition-colors"
               >
                 Lihat Menu
-              </a>
+              </router-link>
               <router-link
                 to="/contact"
                 class="inline-flex items-center rounded-full border border-amber-600 px-5 py-2.5 text-xs md:text-sm font-semibold text-amber-700 hover:bg-amber-50 transition-colors"
@@ -75,8 +75,8 @@
       <!-- OVERVIEW / KEUNGGULAN -->
       <Overview />
 
-      <!-- MENU FAVORIT -->
-      <section id="menu" class="container mx-auto px-4 py-16">
+      <!-- MENU FAVORIT (card mirip figma) -->
+      <section class="container mx-auto px-4 py-16">
         <div class="flex items-center justify-between mb-6">
           <div>
             <h2 class="text-2xl md:text-3xl font-bold text-slate-900">

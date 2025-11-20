@@ -30,19 +30,28 @@
           </router-link>
         </li>
         <li>
-          <a href="#menu" class="text-gray-700 hover:text-amber-700">
+          <router-link
+            to="/menu"
+            class="text-gray-700 hover:text-amber-700 transition-colors"
+          >
             Menu
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#tentang" class="text-gray-700 hover:text-amber-700">
+          <router-link
+            to="/tentang"
+            class="text-gray-700 hover:text-amber-700 transition-colors"
+          >
             Tentang
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#galeri" class="text-gray-700 hover:text-amber-700">
+          <router-link
+            to="/galeri"
+            class="text-gray-700 hover:text-amber-700 transition-colors"
+          >
             Galeri
-          </a>
+          </router-link>
         </li>
         <li>
           <router-link
@@ -77,27 +86,27 @@
         >
           Beranda
         </router-link>
-        <a
-          href="#menu"
+        <router-link
+          to="/menu"
           class="block text-gray-700 hover:text-amber-700"
           @click="closeMenu"
         >
           Menu
-        </a>
-        <a
-          href="#tentang"
+        </router-link>
+        <router-link
+          to="/tentang"
           class="block text-gray-700 hover:text-amber-700"
           @click="closeMenu"
         >
           Tentang
-        </a>
-        <a
-          href="#galeri"
+        </router-link>
+        <router-link
+          to="/galeri"
           class="block text-gray-700 hover:text-amber-700"
           @click="closeMenu"
         >
           Galeri
-        </a>
+        </router-link>
         <router-link
           to="/contact"
           class="block text-amber-700 font-semibold"

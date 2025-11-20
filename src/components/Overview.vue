@@ -5,8 +5,8 @@
         Kenapa Memilih Pawon?
       </h2>
       <p class="text-sm text-slate-500">
-        Kami menggabungkan cita rasa rumahan, bahan berkualitas, dan pelayanan
-        hangat untuk setiap pelanggan.
+        Warung makan dengan rasa rumahan, bahan segar, dan harga tetap
+        bersahabat.
       </p>
     </div>
 
@@ -16,11 +16,10 @@
       >
         <p class="text-xs font-semibold text-amber-700">01 • Bahan Segar</p>
         <h3 class="font-semibold text-slate-900 text-sm">
-          Bahan berkualitas setiap hari
+          Kualitas bahan setiap hari
         </h3>
         <p class="text-xs text-slate-500">
-          Sayur, daging, dan bumbu dipilih dengan cermat sehingga rasa tetap
-          konsisten dan sehat.
+          Sayur, daging, dan bumbu dipilih langsung dari pemasok lokal.
         </p>
       </div>
 
@@ -29,10 +28,11 @@
       >
         <p class="text-xs font-semibold text-amber-700">02 • Resep Rumahan</p>
         <h3 class="font-semibold text-slate-900 text-sm">
-          Cita rasa autentik nusantara
+          Cita rasa khas nusantara
         </h3>
         <p class="text-xs text-slate-500">
-          Resep turun-temurun dengan sentuhan modern, cocok untuk semua lidah.
+          Resep turun-temurun yang disesuaikan dengan selera pelanggan masa
+          kini.
         </p>
       </div>
 
@@ -41,10 +41,10 @@
       >
         <p class="text-xs font-semibold text-amber-700">03 • Suasana Hangat</p>
         <h3 class="font-semibold text-slate-900 text-sm">
-          Tempat nyaman untuk berkumpul
+          Nyaman untuk kumpul
         </h3>
         <p class="text-xs text-slate-500">
-          Cocok untuk makan sendiri, bersama keluarga, ataupun teman kerja.
+          Cocok untuk makan sendiri, bareng keluarga, atau teman kerja.
         </p>
       </div>
     </div>

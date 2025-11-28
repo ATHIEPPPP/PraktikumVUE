@@ -12,16 +12,16 @@
         ></div>
 
         <div
-          class="relative container mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+          class="relative container mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-10"
         >
-          <div class="space-y-3 max-w-xl">
+          <div class="space-y-4 max-w-xl">
             <span
-              class="inline-flex items-center rounded-full bg-white/70 px-3 py-1 text-[11px] font-medium text-amber-700 shadow-sm"
+              class="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-amber-700 shadow-sm"
             >
               📋 Daftar Menu Pawon
             </span>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
               Menu Pawon
             </h1>
 
@@ -33,28 +33,28 @@
           </div>
 
           <div
-            class="grid grid-cols-2 gap-3 text-[11px] md:text-xs text-slate-700 max-w-xs md:max-w-sm"
+            class="grid grid-cols-2 gap-4 text-[11px] md:text-xs text-slate-700 max-w-xs md:max-w-sm"
           >
             <div
-              class="rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-sm"
+              class="rounded-2xl border border-amber-200 bg-white/90 px-3 py-2 shadow-sm"
             >
               <p class="font-semibold text-amber-700">50+</p>
               <p>Varian menu</p>
             </div>
             <div
-              class="rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-sm"
+              class="rounded-2xl border border-amber-200 bg-white/90 px-3 py-2 shadow-sm"
             >
               <p class="font-semibold text-amber-700">4.8/5</p>
               <p>Rating pelanggan</p>
             </div>
             <div
-              class="rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-sm"
+              class="rounded-2xl border border-amber-200 bg-white/90 px-3 py-2 shadow-sm"
             >
               <p class="font-semibold text-amber-700">10.00–22.00</p>
               <p>Jam buka</p>
             </div>
             <div
-              class="rounded-2xl border border-amber-200 bg-white/80 px-3 py-2 shadow-sm"
+              class="rounded-2xl border border-amber-200 bg-white/90 px-3 py-2 shadow-sm"
             >
               <p class="font-semibold text-amber-700">Dine-in & Takeaway</p>
               <p>Layanan</p>
@@ -64,17 +64,17 @@
       </section>
 
       <!-- PANEL PUTIH UNTUK FILTER + GRID MENU -->
-      <section class="container mx-auto px-4 -mt-10 pb-16 relative z-10">
-        <div class="rounded-3xl bg-white shadow-lg px-4 md:px-6 py-6 md:py-8">
+      <section class="container mx-auto px-4 -mt-12 pb-16 relative z-10">
+        <div class="rounded-3xl bg-white shadow-xl shadow-slate-200/70 px-4 md:px-6 py-8 md:py-10 border border-slate-100">
           <!-- Filter kategori -->
-          <div class="mt-10 md:mt-12 flex flex-wrap gap-2 mb-6">
+          <div class="flex flex-wrap gap-2 mb-8">
             <button
               v-for="cat in categories"
               :key="cat"
-              class="px-4 py-2 rounded-full text-xs font-semibold border transition-colors"
+              class="px-4 py-2 rounded-full text-xs font-semibold border transition-all"
               :class="
                 currentCategory === cat
-                  ? 'bg-amber-600 text-white border-amber-600'
+                  ? 'bg-gradient-to-r from-amber-600 to-amber-700 text-white border-amber-600 shadow'
                   : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
               "
               @click="currentCategory = cat"

@@ -8,7 +8,7 @@
         class="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50"
       >
         <div
-          class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.25),_transparent_60%)]"
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,146,60,0.25),transparent_60%)]"
         ></div>
 
         <div
@@ -35,13 +35,13 @@
             <div class="flex flex-wrap gap-3">
               <router-link
                 to="/menu"
-                class="inline-flex items-center rounded-full bg-amber-600 px-5 py-2.5 text-xs md:text-sm font-semibold text-white shadow hover:bg-amber-700 transition-colors"
+                class="inline-flex items-center rounded-full bg-gradient-to-r from-amber-600 to-amber-700 px-5 py-2.5 text-xs md:text-sm font-semibold text-white shadow-md hover:from-amber-700 hover:to-amber-800 hover:shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Lihat Menu
               </router-link>
               <router-link
                 to="/contact"
-                class="inline-flex items-center rounded-full border border-amber-600 px-5 py-2.5 text-xs md:text-sm font-semibold text-amber-700 hover:bg-amber-50 transition-colors"
+                class="inline-flex items-center rounded-full border border-amber-600 px-5 py-2.5 text-xs md:text-sm font-semibold text-amber-700 bg-white/80 hover:bg-amber-50 transition-all shadow-sm hover:shadow-md"
               >
                 Reservasi / Kontak
               </router-link>
@@ -61,7 +61,7 @@
 
           <!-- Gambar -->
           <div
-            class="flex-1 max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-xl border border-amber-100 bg-white"
+            class="flex-1 max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-amber-100 bg-white"
           >
             <img
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
@@ -77,9 +77,9 @@
 
       <!-- MENU FAVORIT (card mirip figma) -->
       <section class="container mx-auto px-4 py-16">
-        <div class="flex items-center justify-between mb-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
               Menu Favorit Pelanggan
             </h2>
             <p class="text-sm text-slate-500">
@@ -92,27 +92,32 @@
           <article
             v-for="menu in featuredMenus"
             :key="menu.id"
-            class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow"
+            class="group bg-white rounded-3xl shadow-md shadow-slate-200/70 border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-1 hover:border-amber-200 transition-all"
           >
-            <div class="h-40 overflow-hidden">
+            <div class="h-40 overflow-hidden relative">
               <img
                 :src="menu.image"
                 :alt="menu.name"
-                class="h-full w-full object-cover group-hover:scale-105 transition-transform"
+                class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
+              <div
+                class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+              ></div>
             </div>
             <div class="p-4 space-y-2">
-              <h3 class="font-semibold text-slate-900 text-sm md:text-base">
+              <h3 class="font-semibold text-slate-900 text-sm md:text-base line-clamp-1">
                 {{ menu.name }}
               </h3>
               <p class="text-xs text-slate-500 line-clamp-2">
                 {{ menu.description }}
               </p>
               <div class="flex items-center justify-between pt-2 text-xs">
-                <span class="font-semibold text-amber-700">
+                <span class="font-bold text-amber-700 text-sm">
                   {{ menu.price }}
                 </span>
-                <span class="text-slate-400">{{ menu.cookTime }}</span>
+                <span class="text-[11px] text-slate-400 flex items-center gap-1">
+                  ⏱ {{ menu.cookTime }}
+                </span>
               </div>
             </div>
           </article>
@@ -122,19 +127,21 @@
       <!-- TESTIMONI -->
       <section id="galeri" class="bg-white border-t border-slate-100">
         <div class="container mx-auto px-4 py-16">
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-            Apa Kata Pelanggan
-          </h2>
-          <p class="text-sm text-slate-500 mb-8 max-w-xl">
-            Testimoni dari pelanggan yang sudah merasakan langsung masakan dan
-            suasana di Pawon.
-          </p>
+          <div class="max-w-xl mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
+              Apa Kata Pelanggan
+            </h2>
+            <p class="text-sm text-slate-500 max-w-xl">
+              Testimoni dari pelanggan yang sudah merasakan langsung masakan dan
+              suasana di Pawon.
+            </p>
+          </div>
 
           <div class="grid gap-6 md:grid-cols-3">
             <div
               v-for="(testi, idx) in testimonials"
               :key="idx"
-              class="rounded-2xl border border-slate-100 bg-slate-50 p-5 text-sm"
+              class="rounded-3xl border border-slate-100 bg-slate-50 p-5 text-sm shadow-sm hover:shadow-md transition-shadow"
             >
               <p class="text-slate-700 mb-3">“{{ testi.text }}”</p>
               <p class="font-semibold text-slate-900">{{ testi.name }}</p>

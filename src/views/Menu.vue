@@ -21,7 +21,9 @@
               📋 Daftar Menu Pawon
             </span>
 
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+            <h1
+              class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight"
+            >
               Menu Pawon
             </h1>
 
@@ -65,7 +67,9 @@
 
       <!-- PANEL PUTIH UNTUK FILTER + GRID MENU -->
       <section class="container mx-auto px-4 -mt-12 pb-16 relative z-10">
-        <div class="rounded-3xl bg-white shadow-xl shadow-slate-200/70 px-4 md:px-6 py-8 md:py-10 border border-slate-100">
+        <div
+          class="rounded-3xl bg-white shadow-xl shadow-slate-200/70 px-4 md:px-6 py-8 md:py-10 border border-slate-100"
+        >
           <!-- Filter kategori -->
           <div class="flex flex-wrap gap-2 mb-8">
             <button
@@ -120,7 +124,7 @@ const menus = [
     description: "Nasi goreng dengan topping telur, ayam suwir, dan kerupuk.",
     price: "Rp 25.000",
     image:
-      "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80",
     category: "Makanan Utama",
     cookTime: "15 menit",
     servings: "1 orang",
@@ -133,7 +137,7 @@ const menus = [
     description: "Ayam krispi dengan sambal ijo pedas yang nagih.",
     price: "Rp 28.000",
     image:
-      "https://images.unsplash.com/photo-1630851840633-12decac09b86?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=900&q=80",
     category: "Lauk Pauk",
     cookTime: "20 menit",
     servings: "1 orang",
@@ -146,7 +150,7 @@ const menus = [
     description: "Sayur segar dengan kuah asam gurih khas Jawa.",
     price: "Rp 15.000",
     image:
-      "https://images.unsplash.com/photo-1690198082010-ca83ca3b88ec?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80",
     category: "Sayuran",
     cookTime: "25 menit",
     servings: "2 orang",
@@ -159,7 +163,7 @@ const menus = [
     description: "Daging sapi empuk dengan bumbu rendang khas Padang.",
     price: "Rp 45.000",
     image:
-      "https://images.unsplash.com/photo-1641847455681-3c26ca5f6251?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80",
     category: "Makanan Utama",
     cookTime: "120 menit",
     servings: "2-3 orang",
@@ -172,7 +176,7 @@ const menus = [
     description: "Teh manis dingin, pas untuk menemani makan siang.",
     price: "Rp 6.000",
     image:
-      "https://images.unsplash.com/photo-1598514983194-3b6b0f1c6732?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=80",
     category: "Minuman",
     cookTime: "5 menit",
     servings: "1 gelas",
@@ -185,7 +189,7 @@ const menus = [
     description: "Perasan jeruk asli tanpa pengawet.",
     price: "Rp 10.000",
     image:
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=900&q=80",
     category: "Minuman",
     cookTime: "5 menit",
     servings: "1 gelas",

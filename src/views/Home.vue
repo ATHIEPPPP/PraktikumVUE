@@ -10,6 +10,12 @@
         <div
           class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,146,60,0.25),transparent_60%)]"
         ></div>
+        <div
+          class="absolute -top-10 -left-10 w-40 h-40 bg-amber-200/40 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute -bottom-10 right-0 w-60 h-60 bg-rose-200/40 rounded-full blur-3xl"
+        ></div>
 
         <div
           class="relative container mx-auto px-4 py-16 lg:py-20 flex flex-col lg:flex-row items-center gap-10"
@@ -47,27 +53,39 @@
               </router-link>
             </div>
 
-            <div class="flex gap-8 text-xs text-slate-600 pt-3">
-              <div>
-                <p class="font-semibold text-slate-900">4.8/5</p>
-                <p>Rating pelanggan</p>
+            <div class="grid grid-cols-2 gap-4 pt-4 text-xs">
+              <div
+                class="rounded-2xl border border-amber-100 bg-white/80 p-3 shadow-sm"
+              >
+                <p class="text-[11px] text-slate-500">Rating pelanggan</p>
+                <p class="text-lg font-bold text-slate-900">4.8/5</p>
               </div>
-              <div>
-                <p class="font-semibold text-slate-900">50+ menu</p>
-                <p>Masakan nusantara</p>
+              <div
+                class="rounded-2xl border border-amber-100 bg-white/80 p-3 shadow-sm"
+              >
+                <p class="text-[11px] text-slate-500">Pilihan menu</p>
+                <p class="text-lg font-bold text-slate-900">50+</p>
               </div>
             </div>
           </div>
 
           <!-- Gambar -->
           <div
-            class="flex-1 max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-amber-100 bg-white"
+            class="relative flex-1 max-w-md lg:max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-amber-100 bg-white"
           >
             <img
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
               alt="Suasana warung makan"
               class="h-full w-full object-cover"
             />
+            <div
+              class="absolute top-6 left-6 rounded-2xl bg-white/90 backdrop-blur px-4 py-3 shadow-lg max-w-[180px] border border-amber-50"
+            >
+              <p class="text-xs text-slate-500">Sejak 2025</p>
+              <p class="text-sm font-semibold text-slate-900">
+                Masakan rumahan favorit keluarga
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -77,9 +95,13 @@
 
       <!-- MENU FAVORIT (card mirip figma) -->
       <section class="container mx-auto px-4 py-16">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8"
+        >
           <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+            <h2
+              class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight"
+            >
               Menu Favorit Pelanggan
             </h2>
             <p class="text-sm text-slate-500">
@@ -105,7 +127,9 @@
               ></div>
             </div>
             <div class="p-4 space-y-2">
-              <h3 class="font-semibold text-slate-900 text-sm md:text-base line-clamp-1">
+              <h3
+                class="font-semibold text-slate-900 text-sm md:text-base line-clamp-1"
+              >
                 {{ menu.name }}
               </h3>
               <p class="text-xs text-slate-500 line-clamp-2">
@@ -115,7 +139,9 @@
                 <span class="font-bold text-amber-700 text-sm">
                   {{ menu.price }}
                 </span>
-                <span class="text-[11px] text-slate-400 flex items-center gap-1">
+                <span
+                  class="text-[11px] text-slate-400 flex items-center gap-1"
+                >
                   ⏱ {{ menu.cookTime }}
                 </span>
               </div>
@@ -169,7 +195,7 @@ const featuredMenus = [
     price: "Rp 25.000",
     cookTime: "15 menit",
     image:
-      "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80",
   },
   {
     id: 2,
@@ -178,7 +204,7 @@ const featuredMenus = [
     price: "Rp 30.000",
     cookTime: "20 menit",
     image:
-      "https://images.unsplash.com/photo-1604908176997-1251884b08a2?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1529563021893-cc83c992d75d?auto=format&fit=crop&w=900&q=80",
   },
   {
     id: 3,
@@ -187,7 +213,7 @@ const featuredMenus = [
     price: "Rp 20.000",
     cookTime: "10 menit",
     image:
-      "https://images.unsplash.com/photo-1676893823515-88fdce6b0107?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80",
   },
 ];
 

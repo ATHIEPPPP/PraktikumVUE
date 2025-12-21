@@ -35,53 +35,59 @@
           <OrderCart @checkout-success="showReviewForm" />
 
           <!-- Promo Code Hints -->
-          <div class="mt-8">
+          <div class="mt-6 sm:mt-8">
             <div
-              class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-6 shadow-lg"
+              class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-4 sm:p-6 shadow-lg"
             >
-              <div class="flex items-start gap-3 mb-4">
+              <div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
                 <div
-                  class="flex-shrink-0 w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center shadow-md"
+                  class="shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-600 flex items-center justify-center shadow-md"
                 >
-                  <span class="text-xl">💡</span>
+                  <span class="text-lg sm:text-xl">💡</span>
                 </div>
                 <div>
-                  <h4 class="font-bold text-amber-900 text-lg mb-1">
+                  <h4
+                    class="font-bold text-amber-900 text-sm sm:text-base md:text-lg mb-0.5 sm:mb-1"
+                  >
                     Kode Promo Tersedia
                   </h4>
-                  <p class="text-sm text-amber-700">
+                  <p class="text-xs sm:text-sm text-amber-700">
                     Gunakan kode di bawah untuk mendapatkan diskon spesial!
                   </p>
                 </div>
               </div>
-              <div class="grid md:grid-cols-3 gap-3">
+              <div class="grid grid-cols-3 gap-2 sm:gap-3">
                 <div
-                  class="bg-white rounded-xl p-4 border-2 border-amber-200 hover:shadow-md transition-all"
+                  class="bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-amber-200 hover:shadow-md transition-all"
                 >
                   <code
-                    class="block bg-amber-100 px-3 py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-2"
+                    class="block bg-amber-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-1 sm:mb-2 text-[10px] sm:text-sm"
                     >PAWON10</code
                   >
-                  <p class="text-xs text-slate-600 text-center">Diskon 10%</p>
+                  <p class="text-[10px] sm:text-xs text-slate-600 text-center">
+                    Diskon 10%
+                  </p>
                 </div>
                 <div
-                  class="bg-white rounded-xl p-4 border-2 border-amber-200 hover:shadow-md transition-all"
+                  class="bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-amber-200 hover:shadow-md transition-all"
                 >
                   <code
-                    class="block bg-amber-100 px-3 py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-2"
+                    class="block bg-amber-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-1 sm:mb-2 text-[10px] sm:text-sm"
                     >PAWON20</code
                   >
-                  <p class="text-xs text-slate-600 text-center">Diskon 20%</p>
+                  <p class="text-[10px] sm:text-xs text-slate-600 text-center">
+                    Diskon 20%
+                  </p>
                 </div>
                 <div
-                  class="bg-white rounded-xl p-4 border-2 border-amber-200 hover:shadow-md transition-all"
+                  class="bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-amber-200 hover:shadow-md transition-all"
                 >
                   <code
-                    class="block bg-amber-100 px-3 py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-2"
+                    class="block bg-amber-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg font-mono font-bold text-amber-900 text-center mb-1 sm:mb-2 text-[10px] sm:text-sm"
                     >HEMAT5</code
                   >
-                  <p class="text-xs text-slate-600 text-center">
-                    Diskon Rp 5.000
+                  <p class="text-[10px] sm:text-xs text-slate-600 text-center">
+                    -Rp 5.000
                   </p>
                 </div>
               </div>

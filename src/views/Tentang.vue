@@ -10,7 +10,9 @@
           >
             🏡 Tentang Kami
           </span>
-          <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3 tracking-tight">
+          <h1
+            class="text-3xl md:text-4xl font-bold text-slate-900 mb-3 tracking-tight"
+          >
             Tentang Pawon
           </h1>
           <p class="text-sm text-slate-500 max-w-2xl">
@@ -20,9 +22,11 @@
         </div>
       </section>
 
-      <section class="container mx-auto px-4 py-16 grid gap-10 md:grid-cols-2">
-        <div class="space-y-5">
-          <h2 class="text-xl font-semibold text-slate-900">
+      <section
+        class="container mx-auto px-4 py-10 sm:py-16 grid gap-8 sm:gap-10 md:grid-cols-2"
+      >
+        <div class="space-y-4 sm:space-y-5">
+          <h2 class="text-lg sm:text-xl font-semibold text-slate-900">
             Cerita di Balik Dapur
           </h2>
           <p class="text-sm text-slate-600">
@@ -35,19 +39,27 @@
           </p>
 
           <div class="grid gap-4 md:grid-cols-2 pt-2 text-sm">
-            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
+            >
               <p class="font-semibold text-slate-900">Didirikan</p>
               <p class="text-slate-600">2025</p>
             </div>
-            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
+            >
               <p class="font-semibold text-slate-900">Lokasi</p>
               <p class="text-slate-600">Samarinda, Kalimantan Timur</p>
             </div>
-            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
+            >
               <p class="font-semibold text-slate-900">Spesialisasi</p>
               <p class="text-slate-600">Masakan Nusantara & Rumahan</p>
             </div>
-            <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
+            >
               <p class="font-semibold text-slate-900">Jam Buka</p>
               <p class="text-slate-600">10.00 – 22.00 WITA</p>
             </div>
@@ -72,7 +84,9 @@
           </h2>
 
           <div class="grid gap-6 md:grid-cols-3 text-sm">
-            <div class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm">
+            <div
+              class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm"
+            >
               <p class="text-xs font-semibold text-amber-700 mb-1">
                 01 • Kejujuran
               </p>
@@ -82,7 +96,9 @@
                 setiap hari.
               </p>
             </div>
-            <div class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm">
+            <div
+              class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm"
+            >
               <p class="text-xs font-semibold text-amber-700 mb-1">
                 02 • Konsistensi
               </p>
@@ -91,7 +107,9 @@
                 Pelanggan bisa berharap rasa yang stabil dari waktu ke waktu.
               </p>
             </div>
-            <div class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm">
+            <div
+              class="p-5 rounded-3xl border border-slate-100 bg-gradient-to-br from-amber-50 via-white to-slate-50 shadow-sm"
+            >
               <p class="text-xs font-semibold text-amber-700 mb-1">
                 03 • Kebersihan
               </p>

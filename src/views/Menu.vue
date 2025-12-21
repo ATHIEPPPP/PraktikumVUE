@@ -88,7 +88,9 @@
           </div>
 
           <!-- Grid menu -->
-          <div class="grid gap-6 md:grid-cols-3">
+          <div
+            class="grid gap-3 sm:gap-4 md:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+          >
             <MenuCard
               v-for="menu in filteredMenus"
               :key="menu.id"

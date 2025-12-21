@@ -49,11 +49,13 @@
         </div>
 
         <!-- Gallery Grid -->
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <div
             v-for="(img, idx) in filteredImages"
             :key="idx"
-            class="group relative overflow-hidden rounded-3xl border-2 border-slate-100 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+            class="group relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-slate-100 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             @click="openLightbox(img, idx)"
           >
             <div class="aspect-[4/3] overflow-hidden">
@@ -66,16 +68,20 @@
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
             >
-              <div class="p-6 w-full">
+              <div class="p-4 sm:p-6 w-full">
                 <span
-                  class="inline-block px-3 py-1 bg-amber-600 text-white text-xs font-bold rounded-full mb-2"
+                  class="inline-block px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-600 text-white text-[10px] sm:text-xs font-bold rounded-full mb-1 sm:mb-2"
                 >
                   {{ img.category }}
                 </span>
-                <h3 class="text-white font-bold text-lg mb-1">
+                <h3
+                  class="text-white font-bold text-sm sm:text-lg mb-0.5 sm:mb-1"
+                >
                   {{ img.title }}
                 </h3>
-                <p class="text-amber-100 text-sm">{{ img.description }}</p>
+                <p class="text-amber-100 text-xs sm:text-sm line-clamp-2">
+                  {{ img.description }}
+                </p>
               </div>
             </div>
           </div>

@@ -1,19 +1,23 @@
 <template>
   <div
-    class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 max-w-2xl mx-auto"
+    class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-4 sm:p-6 md:p-8 max-w-2xl mx-auto"
   >
-    <div class="flex items-start justify-between mb-6">
-      <div class="flex items-start gap-4">
+    <div class="flex items-start justify-between mb-4 sm:mb-6">
+      <div class="flex items-start gap-3 sm:gap-4">
         <div
-          class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/30"
+          class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/30"
         >
-          <span class="text-2xl">🛒</span>
+          <span class="text-xl sm:text-2xl">🛒</span>
         </div>
         <div>
-          <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-1">
+          <h3
+            class="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 tracking-tight mb-1"
+          >
             Keranjang Pesanan
           </h3>
-          <p class="text-sm text-slate-500">{{ cart.length }} item dipilih</p>
+          <p class="text-xs sm:text-sm text-slate-500">
+            {{ cart.length }} item dipilih
+          </p>
         </div>
       </div>
       <button
@@ -50,24 +54,28 @@
         <div
           v-for="item in cart"
           :key="item.id"
-          class="flex gap-4 p-4 bg-gradient-to-br from-slate-50 to-slate-50/50 rounded-2xl border-2 border-slate-100 hover:border-amber-300 hover:shadow-lg transition-all group"
+          class="flex gap-2 sm:gap-4 p-3 sm:p-4 bg-gradient-to-br from-slate-50 to-slate-50/50 rounded-2xl border-2 border-slate-100 hover:border-amber-300 hover:shadow-lg transition-all group"
         >
           <!-- Image -->
           <img
             :src="item.image"
             :alt="item.name"
-            class="w-24 h-24 rounded-xl object-cover shadow-md group-hover:shadow-lg transition-all"
+            class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-md group-hover:shadow-lg transition-all"
           />
 
           <!-- Details -->
           <div class="flex-1 min-w-0">
-            <h4 class="font-bold text-slate-900 text-base mb-1 truncate">
+            <h4
+              class="font-bold text-slate-900 text-sm sm:text-base mb-1 truncate"
+            >
               {{ item.name }}
             </h4>
-            <p class="text-xs text-slate-500 mb-2 font-medium">
+            <p
+              class="text-[10px] sm:text-xs text-slate-500 mb-1 sm:mb-2 font-medium"
+            >
               🏜️ {{ item.category }}
             </p>
-            <p class="font-bold text-amber-700 text-lg">
+            <p class="font-bold text-amber-700 text-sm sm:text-base md:text-lg">
               {{ formatPrice(item.price) }}
             </p>
           </div>
@@ -95,22 +103,23 @@
             </button>
 
             <div
-              class="flex items-center gap-1 bg-white border-2 border-slate-200 rounded-xl shadow-sm"
+              class="flex items-center gap-0.5 sm:gap-1 bg-white border-2 border-slate-200 rounded-lg sm:rounded-xl shadow-sm"
             >
               <button
                 @click="decrementQuantity(item.id)"
-                class="px-4 py-2 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-l-xl transition-all font-bold text-lg"
+                class="px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-l-lg sm:rounded-l-xl transition-all font-bold text-sm sm:text-base md:text-lg"
                 :disabled="item.quantity <= 1"
                 :class="{ 'opacity-30 cursor-not-allowed': item.quantity <= 1 }"
               >
                 −
               </button>
-              <span class="w-10 text-center font-bold text-base">{{
-                item.quantity
-              }}</span>
+              <span
+                class="w-6 sm:w-8 md:w-10 text-center font-bold text-xs sm:text-sm md:text-base"
+                >{{ item.quantity }}</span
+              >
               <button
                 @click="incrementQuantity(item.id)"
-                class="px-4 py-2 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-r-xl transition-all font-bold text-lg"
+                class="px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-r-lg sm:rounded-r-xl transition-all font-bold text-sm sm:text-base md:text-lg"
                 :disabled="item.quantity >= 99"
                 :class="{
                   'opacity-30 cursor-not-allowed': item.quantity >= 99,
@@ -128,7 +137,7 @@
     <button
       v-if="cart.length > 0"
       @click="showMenuSelector = true"
-      class="w-full py-3 border-2 border-dashed border-slate-300 rounded-xl text-slate-700 hover:border-amber-500 hover:text-amber-700 hover:bg-amber-50/30 transition-all font-bold text-sm mb-6 hover:scale-[1.01]"
+      class="w-full py-2 sm:py-3 border-2 border-dashed border-slate-300 rounded-xl text-slate-700 hover:border-amber-500 hover:text-amber-700 hover:bg-amber-50/30 transition-all font-semibold text-xs sm:text-sm mb-4 sm:mb-6 hover:scale-[1.01]"
     >
       ➕ Tambah Menu Lainnya
     </button>
@@ -136,32 +145,36 @@
     <!-- Summary -->
     <div
       v-if="cart.length > 0"
-      class="border-t-2 border-slate-200 pt-6 space-y-4"
+      class="border-t-2 border-slate-200 pt-4 sm:pt-6 space-y-3 sm:space-y-4"
     >
-      <div class="flex justify-between text-sm p-3 bg-slate-50 rounded-xl">
+      <div
+        class="flex justify-between text-xs sm:text-sm p-2 sm:p-3 bg-slate-50 rounded-xl"
+      >
         <span class="text-slate-600 font-medium">Subtotal</span>
         <span class="font-bold text-slate-900">{{
           formatPrice(subtotal)
         }}</span>
       </div>
-      <div class="flex justify-between text-sm p-3 bg-slate-50 rounded-xl">
+      <div
+        class="flex justify-between text-xs sm:text-sm p-2 sm:p-3 bg-slate-50 rounded-xl"
+      >
         <span class="text-slate-600 font-medium">Pajak (10%)</span>
         <span class="font-bold text-slate-900">{{ formatPrice(tax) }}</span>
       </div>
 
       <!-- Fitur 9: Promo Code Input -->
-      <div class="pt-2">
+      <div class="pt-1 sm:pt-2">
         <div class="flex gap-2">
           <input
             v-model="promoCode"
             type="text"
             placeholder="🎫 Masukkan Kode Promo"
-            class="flex-1 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 transition-all outline-none text-sm font-medium bg-white hover:border-slate-300"
+            class="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-xl border-2 border-slate-200 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 transition-all outline-none text-xs sm:text-sm font-medium bg-white hover:border-slate-300"
             @keyup.enter="applyPromo"
           />
           <button
             @click="applyPromo"
-            class="px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-xl font-bold hover:from-slate-700 hover:to-slate-800 hover:scale-105 shadow-md transition-all text-sm"
+            class="px-3 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-xl font-bold hover:from-slate-700 hover:to-slate-800 hover:scale-105 shadow-md transition-all text-xs sm:text-sm"
           >
             ✓ Gunakan
           </button>
@@ -181,7 +194,7 @@
       <transition name="discount">
         <div
           v-if="discount > 0"
-          class="flex justify-between text-sm p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200"
+          class="flex justify-between text-xs sm:text-sm p-2 sm:p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200"
         >
           <span class="font-bold text-green-700">🎉 Diskon</span>
           <span class="font-bold text-green-700"
@@ -191,7 +204,7 @@
       </transition>
 
       <div
-        class="flex justify-between text-xl font-bold pt-4 mt-4 p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border-2 border-amber-200"
+        class="flex justify-between text-base sm:text-lg md:text-xl font-bold pt-3 sm:pt-4 mt-3 sm:mt-4 p-3 sm:p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border-2 border-amber-200"
       >
         <span class="text-slate-900">Total Pembayaran</span>
         <span class="text-amber-700">{{ formatPrice(total) }}</span>
@@ -200,7 +213,7 @@
       <!-- Fitur 10: Animated Checkout Button -->
       <button
         @click="checkout"
-        class="w-full bg-gradient-to-r from-amber-600 to-amber-700 text-white font-bold py-4 rounded-xl hover:from-amber-700 hover:to-amber-800 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-amber-600/30 hover:shadow-2xl hover:shadow-amber-600/40 text-lg"
+        class="w-full bg-gradient-to-r from-amber-600 to-amber-700 text-white font-bold py-3 sm:py-4 rounded-xl hover:from-amber-700 hover:to-amber-800 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-amber-600/30 hover:shadow-2xl hover:shadow-amber-600/40 text-sm sm:text-base md:text-lg"
       >
         🛍️ Checkout Sekarang
       </button>
